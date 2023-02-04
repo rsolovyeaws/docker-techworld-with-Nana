@@ -21,7 +21,7 @@ app.get('/profile-picture', function (req, res) {
 });
 
 // use when starting application locally
-let mongoUrlLocal = "mongodb://admin:password@localhost:27017";
+let mongoUrlLocal = "mongodb://admin:password@ec2-18-234-105-150.compute-1.amazonaws.com:27017";
 
 // use when starting application as docker container
 let mongoUrlDocker = "mongodb://admin:password@mongodb";
@@ -30,7 +30,7 @@ let mongoUrlDocker = "mongodb://admin:password@mongodb";
 let mongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 
 // "user-account" in demo with docker. "my-db" in demo with docker-compose
-let databaseName = "my-db";
+let databaseName = "user-account";
 
 app.post('/update-profile', function (req, res) {
   let userObj = req.body;
