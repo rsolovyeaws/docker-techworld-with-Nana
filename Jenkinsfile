@@ -9,7 +9,7 @@ pipeline {
  		stage('Stage 2'){
                         steps {
                         	echo "Stage 2 step"
-				docker info
+				sh ''' docker info '''
        			}
                 }
 
