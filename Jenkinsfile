@@ -10,6 +10,7 @@ pipeline {
                         steps {
                         	echo "Stage 2 step"
 				sh ''' whoami '''
+				sh ''' docker info '''
        			}
                 }
 
