@@ -1,8 +1,5 @@
 pipeline {
 	agent any 
-	environment {
-	PATH = "$PATH:/usr/local/bin"
-	}
 	stages {
 		stage('Build'){
 			steps { 
@@ -14,7 +11,7 @@ pipeline {
                         	echo "Stage 2 step"
 				sh ''' whoami '''
 				sh ''' docker info '''
-				sh ''' docker-compose -f mongo.yml up '''
+				sh ''' docker-compose --version '''
        			}
                 }
 
