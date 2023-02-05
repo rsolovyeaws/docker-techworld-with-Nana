@@ -3,13 +3,17 @@ pipeline {
 	stages {
 		stage('Build'){
 			steps { 
-			echo "Building step"
+				echo "Building step"
 			}
 		} 
  		stage('Stage 2'){
                         steps {
-                        echo "Stage 2 step"
-                        }
+                        	echo "Stage 2 step"
+                		sh '''
+				docker info
+				'''
+       	
+			}
                 }
 
 	}	
