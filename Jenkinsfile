@@ -10,8 +10,6 @@ pipeline {
                         steps {
                         	echo "Stage 2 step"
 				sh ''' whoami '''
-				sh ''' docker info '''
-				sh ''' docker-compose -f mongo.yml up '''
        			}
                 }
 
